@@ -52,7 +52,14 @@ io.on('connection', socket => {
         user.name = (newName.name || socket.id)
 
         // Att users on the room
-        io.emit("ON_USERS_UPDATE", JSON.stringify(users))
+        const u = new User({ id: users[socket.id].id, x: users[socket.id].x, y: users[socket.id].y, name: users[socket.id].name })
+        u.save().then(() => {
+
+            // Att users on the room
+            io.emit("ON_USERS_UPDATE", JSON.stringify(users))
+
+        })
+
 
     })
 
@@ -65,15 +72,6 @@ io.on('connection', socket => {
 
         // Att users on the room
         io.emit("ON_USERS_UPDATE", JSON.stringify(users))
-
-        const u = new User({ id: users[socket.id].id, x: users[socket.id].x, y: users[socket.id].y, name: users[socket.id].name })
-        u.save().then(() => {
-
-            // Att users on the room
-            io.emit("ON_USERS_UPDATE", JSON.stringify(users))
-            
-        })
-
 
     })
 
