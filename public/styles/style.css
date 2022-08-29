@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: sans-serif;
+  font-size: 8px;
+  color: white;
+  background-color: #121212;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  overflow: hidden;
+}
+
+.player {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("../assets/sprite.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 35px 0 0 5px;
+}
+
+#canvas {
+  background: url("../assets/grass.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.name {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.524);
+  backdrop-filter: blur(3px);
+
+  z-index: 10;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name input {
+  border: none;
+  padding: 10px 15px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  border-radius: 30px;
+}
+
+.name button {
+  width: 100px;
+  height: 30px;
+  background-color: #121212;
+  color: #fff;
+  border-radius: 30px;
+  margin-top: 20px;
+  border: none;
+}
+
+.name button:hover {
+  cursor: pointer;
+  background-color: #2b2b2b;
+}

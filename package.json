@@ -1,0 +1,18 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node",
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
